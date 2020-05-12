@@ -29,6 +29,16 @@ public class EvilSpitPlantAI : Creature
     public AK.Wwise.Event Death_Headfall = new AK.Wwise.Event();
     public AK.Wwise.Event asdasdasfasda;
 
+    [Header("Audio Sources")]
+    [SerializeField]
+    private AudioSource deathSource;
+    [SerializeField]
+    private AudioSource chargeSource;
+    [SerializeField]
+    private AudioSource hurtSource;
+    [SerializeField]
+    private AudioSource shootSource;
+
     public override void OnSpotting()
     {
         base.OnSpotting();
@@ -66,11 +76,14 @@ public class EvilSpitPlantAI : Creature
 
             GameObject bulletSpawnFX = Instantiate(shootParticles, spitBulletSpawnPoint.transform.position, Quaternion.identity, spitBulletSpawnPoint.transform) as GameObject; //TODO: Pool spitbullet spawn particles
             Destroy(bulletSpawnFX, 5f);
+
+            shootSource.Play(); 
         }
     }
 
     public void PlayChargeSound()
     {
+        chargeSource.Play(); 
         ChargeSound.Post(gameObject);
     }
 
@@ -97,6 +110,7 @@ public class EvilSpitPlantAI : Creature
 
     public override void OnDamageReset()
     {
+        hurtSource.Play(); 
         base.OnDamageReset();
         lockRotation = false;
     }
@@ -137,6 +151,7 @@ public class EvilSpitPlantAI : Creature
 
     public void OnDeathHeadFall()
     {
+        deathSource.Play(); 
         Death_Headfall.Post(this.gameObject);
     }
 }

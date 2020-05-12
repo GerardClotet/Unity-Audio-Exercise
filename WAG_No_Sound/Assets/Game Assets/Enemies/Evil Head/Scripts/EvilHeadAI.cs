@@ -23,6 +23,10 @@ public class EvilHeadAI : Creature
     public AK.Wwise.Event ChargeSound;
     public AK.Wwise.Event TelegraphSound;
 
+    [Header("Audio Sources")]
+    [SerializeField]
+    private AudioSource audioSource; 
+
     #region private variables
     private Vector3 targetLocation = Vector3.zero;
     private IEnumerator chargeRoutine;
@@ -189,6 +193,7 @@ public class EvilHeadAI : Creature
     /// </summary>
     public void PlayBiteSound()
     {
+        audioSource.Play(); 
         BiteSound.Post(this.gameObject);
     }
 }

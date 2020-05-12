@@ -121,6 +121,8 @@ public class Weapon : MonoBehaviour, IInteractable
         prefab.transform.parent = PlayerManager.Instance.weaponSlot.transform;
         Utility.StripGameObjectFromComponents(gameObject, typeof(Pickup));
         equipped = true;
+
+        // Play FX
     }
 
     public void UnequipWeapon()
