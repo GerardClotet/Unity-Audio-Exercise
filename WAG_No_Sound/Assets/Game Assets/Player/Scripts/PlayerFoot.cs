@@ -13,6 +13,7 @@ public class PlayerFoot : MonoBehaviour
     public MaterialChecker materialChecker;
     public AK.Wwise.Event FootstepSound;
 
+
     #region private variables
     private bool inWater;
     #endregion
