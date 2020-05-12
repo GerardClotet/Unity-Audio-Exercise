@@ -26,6 +26,13 @@ public class WwizardAI : Creature
     public NavMeshAgent navMeshAgent;
     public NavMeshObstacle navMeshObstacle;
 
+    [Header("Audio Sources")] // no staff hit ground sound in project... XD
+    [SerializeField]
+    private AudioSource poofSource;
+    [SerializeField]
+    private AudioSource chargeSource;
+
+
     #region private variables
     //Cached animator hashes
     private readonly int questChargeHash = Animator.StringToHash("Quest_Charge");
@@ -57,6 +64,7 @@ public class WwizardAI : Creature
     {
         if (Gimmick1PoofParticles != null && Gimmick1PoofTransform != null)
         {
+            poofSource.Play(); 
             GameObject p = Instantiate(Gimmick1PoofParticles, Gimmick1PoofTransform.transform.position + Gimmick1Displacement, Quaternion.identity) as GameObject;
             PoofGimmickSound.Post(p);
             Destroy(p, 5f);
@@ -70,6 +78,7 @@ public class WwizardAI : Creature
 
     public void DoneCharging()
     {
+        chargeSource.Play(); 
         chargeParticles.enabled = false;
     }
 
