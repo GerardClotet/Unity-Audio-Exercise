@@ -25,7 +25,15 @@ public class EvilHeadAI : Creature
 
     [Header("Audio Sources")]
     [SerializeField]
-    private AudioSource audioSource; 
+    private AudioSource biteSource;
+    [SerializeField]
+    private AudioSource chargeSource;
+    [SerializeField]
+    private AudioSource deathSource;
+    [SerializeField]
+    private AudioSource hurtSource;
+
+
 
     #region private variables
     private Vector3 targetLocation = Vector3.zero;
@@ -68,7 +76,6 @@ public class EvilHeadAI : Creature
 
     public override void Anim_MeleeAttack()
     {
-        
         base.Anim_MeleeAttack();
         SetMovementSpeed(100f);
     }
@@ -123,6 +130,7 @@ public class EvilHeadAI : Creature
         //print(Time.realtimeSinceStartup + ": ChargeTowardsPlayer");
         TelegraphSound.Stop(gameObject,0, AkCurveInterpolation.AkCurveInterpolation_Linear);
         ChargeSound.Post(gameObject);
+        chargeSource.Play();
 
         Vector3 currentPosition = transform.position;
         Vector3 destination = targetLocation + ((targetLocation) - currentPosition).normalized * 2f;
@@ -184,6 +192,7 @@ public class EvilHeadAI : Creature
             Destroy(keepOnDeath, 5f);
         }
 
+        deathSource.Play(); 
         PlayCreatureDeathSound();
         Destroy(gameObject);
     }
@@ -193,7 +202,7 @@ public class EvilHeadAI : Creature
     /// </summary>
     public void PlayBiteSound()
     {
-        audioSource.Play(); 
+        biteSource.Play();
         BiteSound.Post(this.gameObject);
     }
 }
