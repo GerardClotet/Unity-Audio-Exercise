@@ -31,6 +31,11 @@ public class EvilSpitPlantProjectile : MonoBehaviour
     public AK.Wwise.Event ImpactSound = new AK.Wwise.Event();
     public AK.Wwise.Event NoImpactSound = new AK.Wwise.Event();
 
+
+    [Header("Audio Sources")]
+    [SerializeField]
+    private AudioSource impactPlayer;
+
     #region private variables
     private Rigidbody rb;
     private float time = 0;
@@ -137,6 +142,7 @@ public class EvilSpitPlantProjectile : MonoBehaviour
 
             if (hitSomething)
             {
+                impactPlayer.Play(); 
                 ImpactSound.Post(go.gameObject);
             }
             else
