@@ -54,6 +54,23 @@ public class DayNightCycle : MonoBehaviour
 
     GameManager GM;
 
+    // Audio enviorment of the village
+    public AudioClip Day_village;
+    public AudioClip Night_village;
+
+
+    // Audio enviorment of the forest
+    public AudioClip Day_forest;
+    public AudioClip Night_forest;
+
+    // Audio enviorment of the pines (night will be the night forest.)
+    public AudioClip Day_pines;
+    public AudioClip Night_pines;
+
+
+    public AudioClip Day_dessert;
+    public AudioClip Night_dessert;
+
     private const string sunSliderString = "SunSlider";
 
     void OnValidate()
@@ -64,6 +81,8 @@ public class DayNightCycle : MonoBehaviour
     void OnEnable()
     {
         sunLight = GetComponent<Light>();
+
+        
 
         //Set the light in the Lighting Settings
         RenderSettings.sun = sunLight;
@@ -114,6 +133,41 @@ public class DayNightCycle : MonoBehaviour
         if (sunLight == null)
         {
             sunLight = GetComponent<Light>();
+        }
+
+        if (timeOfDay >= 5.19f && timeOfDay <= 5.2f) //day
+        {
+         
+            GameObject.Find("BankRegion_Village").GetComponent<AudioSource>().clip = Day_village;
+            GameObject.Find("BankRegion_Village").GetComponent<AudioSource>().Play();
+
+
+            GameObject.Find("BankRegion_Woodlands").GetComponent<AudioSource>().clip = Day_forest;
+            GameObject.Find("BankRegion_Woodlands").GetComponent<AudioSource>().Play();
+
+            
+            GameObject.Find("BankRegion_PineForestMesh").GetComponent<AudioSource>().clip = Day_pines;
+            GameObject.Find("BankRegion_PineForestMesh").GetComponent<AudioSource>().Play();
+
+            GameObject.Find("BankRegion_Desert").GetComponent<AudioSource>().clip = Day_dessert;
+            GameObject.Find("BankRegion_Desert").GetComponent<AudioSource>().Play();
+
+        }
+
+
+        if (timeOfDay >= 21.19f && timeOfDay <= 21.2f)//night
+        {
+            GameObject.Find("BankRegion_Village").GetComponent<AudioSource>().clip = Night_village;
+            GameObject.Find("BankRegion_Village").GetComponent<AudioSource>().Play();
+
+            GameObject.Find("BankRegion_Woodlands").GetComponent<AudioSource>().clip = Night_forest;
+            GameObject.Find("BankRegion_Woodlands").GetComponent<AudioSource>().Play();
+
+            GameObject.Find("BankRegion_PineForestMesh").GetComponent<AudioSource>().clip = Night_pines;
+            GameObject.Find("BankRegion_PineForestMesh").GetComponent<AudioSource>().Play();
+
+            GameObject.Find("BankRegion_Desert").GetComponent<AudioSource>().clip = Night_dessert;
+            GameObject.Find("BankRegion_Desert").GetComponent<AudioSource>().Play();
         }
 
 
