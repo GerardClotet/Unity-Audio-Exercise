@@ -15,10 +15,10 @@ public class Menu : MonoBehaviour
     public static bool isOpen = false;
     public static MenuStateEvent OnMenuStateChange;
 
-    [Header("Wwise")]
-    public AK.Wwise.RTPC MenuRTPC;
-    public AK.Wwise.Event MenuOpenSound;
-    public AK.Wwise.Event MenuCloseSound;
+    //[Header("Wwise")]
+    //public AK.Wwise.RTPC MenuRTPC;
+    //public AK.Wwise.Event MenuOpenSound;
+    //public AK.Wwise.Event MenuCloseSound;
 
     [Header("Other")]
     public AnimatedObjectActiveHandler ControlsBox;
@@ -26,14 +26,25 @@ public class Menu : MonoBehaviour
     public bool GetMouseWithP = false;
 
     public MenuEvent OnMenuDown;
-    [SerializeField]
-    private AudioSource MenuOpenSFX;
-    [SerializeField]
-    private AudioSource MenuCloseSFX;
+    //[SerializeField]
+    //private AudioSource MenuOpenSFX;
+    //[SerializeField]
+    //private AudioSource MenuCloseSFX;
 
+    //[Header("AudioClips")]
+    public AudioClip OpenSFX;
+    public AudioClip CloseSFX;
+
+    
+    private AudioSource audio_source;
 
     private bool menuOpen = false;
 
+
+    public void Start()
+    {
+        audio_source = GameObject.Find("Menus").GetComponent<AudioSource>();
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) && GetMouseWithP) {
@@ -61,10 +72,13 @@ public class Menu : MonoBehaviour
             isOpen = menuOpen;
             if (menuOpen)
             {
-                MenuOpenSound.Post(gameObject);
-                if (MenuOpenSFX != null)
-                    MenuOpenSFX.Play();
-                MenuRTPC.SetGlobalValue(100f);
+               
+                //if (MenuOpenSFX != null)
+                //    MenuOpenSFX.Play();
+
+                audio_source.clip = OpenSFX;
+                if (audio_source.clip != null)
+                    audio_source.Play();
                 GameManager.Instance.gameSpeedHandler.PauseGameSpeed(gameObject.GetInstanceID());
                 GameManager.Instance.BlurCam();
 
@@ -76,10 +90,14 @@ public class Menu : MonoBehaviour
             }
             else
             {
-                MenuCloseSound.Post(gameObject);
-                if (MenuCloseSFX != null)
-                    MenuCloseSFX.Play();
-                MenuRTPC.SetGlobalValue(0f);
+                //MenuCloseSound.Post(gameObject);
+                //if (MenuCloseSFX != null)
+                //    MenuCloseSFX.Play();
+                //MenuRTPC.SetGlobalValue(0f);
+
+                audio_source.clip = CloseSFX;
+                if (audio_source.clip != null)
+                    audio_source.Play();
                 GameManager.Instance.gameSpeedHandler.UnPauseGameSpeed(gameObject.GetInstanceID());
                 GameManager.Instance.UnBlurCam();
                 QuestBox.DisableObject(0.25f);

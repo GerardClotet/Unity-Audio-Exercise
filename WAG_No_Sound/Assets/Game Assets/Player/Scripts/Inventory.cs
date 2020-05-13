@@ -81,14 +81,21 @@ public class Inventory : MonoBehaviour
     private Image MarkerImage_Row3;
     #endregion
 
-    [SerializeField]
-    private AudioSource IventoryOpenSFX;
-    [SerializeField]
-    private AudioSource InventoryCloseSFX;
-    [SerializeField]
-    private AudioSource InventorySelectSFX;
-    [SerializeField]
-    private AudioSource InventoryScrollSFX;
+  
+
+    [Header("AudioClips")]
+    public AudioClip In_OpenSFX;
+    public AudioClip In_CloseSFX;
+    public AudioClip In_SelectSFX;
+    public AudioClip In_ScrollSFX;
+
+    private AudioSource audio_source;
+
+
+    public void Start()
+    {
+        audio_source = GameObject.Find("Menus").GetComponent<AudioSource>();
+    }
     private void OnDestroy()
     {
         InputManager.OnInventoryDown -= OpenInventory;
@@ -726,8 +733,11 @@ public class Inventory : MonoBehaviour
             
             InventoryIsOut = true;
 
-            if(IventoryOpenSFX != null)
-                IventoryOpenSFX.Play();
+            
+
+            audio_source.clip = In_OpenSFX;
+            if (audio_source.clip != null)
+                audio_source.Play();
             if (EventSystem.current != null)
             {
                 EventSystem.current.SetSelectedGameObject(SelectedGameobject);
@@ -748,8 +758,9 @@ public class Inventory : MonoBehaviour
         if (InventoryIsOut)
         {
 
-            if (InventoryCloseSFX != null)
-                InventoryCloseSFX.Play();
+            audio_source.clip = In_CloseSFX;
+            if (audio_source.clip != null)
+                audio_source.Play();
 
             canvasGroup.interactable = false;
             InventoryClosedSound.Post(gameObject);
@@ -775,9 +786,11 @@ public class Inventory : MonoBehaviour
     {
         if (CanPressRights[SelectedRow])
         {
-            if (InventoryScrollSFX != null)
-                InventoryScrollSFX.Play();
 
+
+            audio_source.clip = In_ScrollSFX;
+            if (audio_source.clip != null)
+                audio_source.Play();
             ButtonIncrement(SelectedRow);
         }
         else
@@ -789,8 +802,9 @@ public class Inventory : MonoBehaviour
     {
         if (CanPressLefts[SelectedRow])
         {
-            if (InventoryScrollSFX != null)
-                InventoryScrollSFX.Play();
+            audio_source.clip = In_ScrollSFX;
+            if (audio_source.clip != null)
+                audio_source.Play();
             InversedIncrement(SelectedRow);
         }
         else
@@ -814,8 +828,9 @@ public class Inventory : MonoBehaviour
     public void ButtonIncrement(int layer)
     {
         InventorySelectSound.Post(gameObject);
-        if (InventorySelectSFX != null)
-            InventorySelectSFX.Play();
+        audio_source.clip = In_SelectSFX;
+        if (audio_source.clip != null)
+            audio_source.Play();
         if (Panel.activeInHierarchy && hasShown)
         {
             if (layer == 0)

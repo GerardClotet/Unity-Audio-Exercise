@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 118
+  controlID: 133
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 65
+  controlID: 30
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 66
+  controlID: 31
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -380,9 +380,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8cdfeeff
-      m_LastClickedID: -1122420
-      m_ExpandedIDs: aaf7edff8ed6eeff2ad8eefffcd8eeff1edbeeffacdfeeffbee4eeff0eeceeff04e1f3ff6ee1f3ffc2e2f3ff281af4ffd877f5fffcb3ffff66b4ffff58b7ffff20edffff166e0000846f00003a7000000471000036710000d0790000b67b0000207c00008881000082860000bc870000fa8f0d0012950d00ee960d000c9b0d00aee50d00e0e50d00d4e70d00e4ec0d00fced0d007eee0d00cef00d005cf70d0038fb0d00b2fb0d0072fc0d0028fe0d005eff0d00a6010e00ee020e00f47c1300
+      m_SelectedIDs: b24f0000
+      m_LastClickedID: 20402
+      m_ExpandedIDs: 02f0ffff82f0ffff36f2ffffd6fbffffba4f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -438,9 +438,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 59.05845, y: -12.365233, z: 292.25024}
+    m_Target: {x: 1020.0281, y: 248.49998, z: 0}
     speed: 2
-    m_Value: {x: 59.05845, y: -12.365233, z: 292.25024}
+    m_Value: {x: 1020.0281, y: 248.49998, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -468,13 +468,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.13925022, y: -0.04248135, z: 0.0059784683, w: 0.9893276}
+    m_Target: {x: 0.24659501, y: -0.30414253, z: 0.08183118, w: 0.91651076}
     speed: 2
-    m_Value: {x: 0.13925022, y: -0.04248135, z: 0.0059784683, w: 0.9893276}
+    m_Value: {x: 0.24659501, y: -0.30414253, z: 0.08183118, w: 0.91651076}
   m_Size:
-    m_Target: 769.509
+    m_Target: 844.6604
     speed: 2
-    m_Value: 769.509
+    m_Value: 844.6604
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -513,7 +513,7 @@ MonoBehaviour:
     height: 393
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: menu
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -530,14 +530,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Audio/SFX/Interface
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\root\Documents\GitHub\Unity-Audio-Exercise\WAG_No_Sound
+  m_LastProjectPath: C:\Users\Gerard Clotet\Documents\GitHub\Unity-Audio-Exercise\WAG_No_Sound
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 26670000
-    m_LastClickedID: 26406
-    m_ExpandedIDs: 00000000ee560000665a0000ae5a0000cc5b0000ae5e0000e25f00007c6000000a610000dc610000e06100006a630000f26400006465000086650000f8650000d466000056670000f2670000146800000c690000146900002c6a00002e6c0000c8bb000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 000000000e130000d41600002417000064180000b21b0000fc1c0000a21d0000441e0000241f0000281f0000be2000006a220000e62200000a230000842300008a2400001a250000c8250000ea250000f0260000f826000032280000662a00004e9c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ee560000ae5a0000cc5b0000ae5e0000e25f00007c6000000a610000dc610000e06100006a630000f26400006465000086650000f8650000d466000056670000146800000c690000146900002c6a00002e6c0000c8bb0000
+    m_ExpandedIDs: 000000000e130000d41600002417000064180000b21b0000fc1c0000a21d0000441e0000241f0000281f0000be2000006a220000e62200000a230000842300008a2400001a250000c8250000ea250000f0260000f826000032280000662a00004e9c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 80250000ca4500000000000040310000322f00005a3100006a2f0000f678000036830000c88a0000f0810000b888000092730000986b00009a810000427d0000ec760000d05a0000ac34000034700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

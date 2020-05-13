@@ -9,28 +9,43 @@ using UnityEngine.EventSystems;
 
 public class UIEventSounds : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public AK.Wwise.Event OnPointerDownSound;
-    public AK.Wwise.Event OnPointerUpSound;
-    public AK.Wwise.Event OnPointerEnterSound;
-    public AK.Wwise.Event OnPointerExitSound;
+    //public AK.Wwise.Event OnPointerDownSound;
+    //public AK.Wwise.Event OnPointerUpSound;
+    //public AK.Wwise.Event OnPointerEnterSound;
+    //public AK.Wwise.Event OnPointerExitSound;
 
+    [Header("Audios")]
+    public AudioClip EnterSFX;
+    public AudioClip OverSFX;
+
+    private AudioSource audio_source;
+    public void Start()
+    {
+        audio_source = GameObject.Find("Menus").GetComponent<AudioSource>();
+ 
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
-        OnPointerDownSound.Post(gameObject);
+        audio_source.clip = EnterSFX;
+        if (audio_source.clip != null)
+            audio_source.Play();
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        OnPointerEnterSound.Post(gameObject);
+        audio_source.clip = OverSFX;
+        if (audio_source.clip != null)
+            audio_source.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        OnPointerExitSound.Post(gameObject);
+       // OnPointerExitSound.Post(gameObject);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        OnPointerUpSound.Post(gameObject);
+      //  OnPointerUpSound.Post(gameObject);
     }
 }

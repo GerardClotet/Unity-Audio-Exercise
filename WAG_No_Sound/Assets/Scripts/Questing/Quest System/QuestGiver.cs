@@ -26,6 +26,9 @@ namespace QuestSystem
         public bool StartQuestLineOnStart = true;
         public List<Quest> Quests;
 
+        [Header("Audio")]
+        [SerializeField]
+        private AudioSource completeQuestSFX;
         #region private variables
         private int currentQuestIdx = 0;
         private bool initializingNewQuest = false;
@@ -86,12 +89,14 @@ namespace QuestSystem
             currentQuestIdx++;
             if (currentQuestIdx < Quests.Count)
             {
-                QuestlineCompleteEvent.Post(gameObject);
+                completeQuestSFX.Play();
+                //QuestlineCompleteEvent.Post(gameObject);
                 InitializeQuest(currentQuestIdx);
             }
             else
             {
-                QuestlineCompleteEvent.Post(gameObject);
+                completeQuestSFX.Play();
+               // QuestlineCompleteEvent.Post(gameObject);
                 if (OnQuestlineComplete != null)
                 {
                     OnQuestlineComplete(this);
