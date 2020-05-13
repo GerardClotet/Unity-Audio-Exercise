@@ -25,12 +25,6 @@ public class AdventuressAnimationEventHandler : MonoBehaviour
     private PlayerFoot foot_R;
 
 
-
-    [Header("Audio Sources")]
-    [SerializeField]
-    private AudioSource footSource;
-
-
     #region private variables
     private bool hasPausedMovement;
     private readonly int canShootMagicHash = Animator.StringToHash("CanShootMagic");
@@ -89,8 +83,6 @@ public class AdventuressAnimationEventHandler : MonoBehaviour
             if (!PlayerManager.Instance.inAir && !onCooldown)
             {
                 Vector3 particlePosition;
-
-                footSource.Play(); 
                 if (side == FootSide.left )
                 {
                     if (foot_L.FootstepSound.Validate())
