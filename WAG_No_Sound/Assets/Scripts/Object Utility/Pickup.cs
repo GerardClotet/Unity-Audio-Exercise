@@ -31,6 +31,12 @@ public class Pickup : MonoBehaviour, IInteractable
 	[Space(15f)]
 	public AK.Wwise.Switch PickupType;
 
+
+    [Header("Audio Sources")]
+    [SerializeField]
+    private AudioSource pickupSource;
+
+
 	#region private variables
 	private float randomOffset;
 	private bool playerInTrigger;
@@ -191,8 +197,10 @@ public class Pickup : MonoBehaviour, IInteractable
 
 			if (interactionSound)
 			{
-				
-				PickUpEvent.Post(gameObject);
+                if(pickupSource)
+                    pickupSource.Play();
+
+                PickUpEvent.Post(gameObject);
 			}
 			if (pickupParticles != null)
 			{

@@ -26,7 +26,7 @@ public class WwizardAI : Creature
     public NavMeshAgent navMeshAgent;
     public NavMeshObstacle navMeshObstacle;
 
-    [Header("Audio Sources")] // no staff hit ground sound in project... XD
+    [Header("Audio Sources")] 
     [SerializeField]
     private AudioSource poofSource;
     [SerializeField]

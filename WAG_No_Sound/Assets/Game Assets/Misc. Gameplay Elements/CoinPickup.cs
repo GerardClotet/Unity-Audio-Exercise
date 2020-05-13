@@ -14,7 +14,7 @@ public class CoinPickup : MonoBehaviour {
     public bool playSpawnSoundAtSpawn = true;
     public AK.Wwise.Event spawnSound;
 
-	void Start(){
+    void Start(){
         if (playSpawnSoundAtSpawn){
             spawnSound.Post(gameObject);
         }

@@ -294,6 +294,7 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 00000000000000000000000000000000
     WwiseObjectReference: {fileID: 0}
+  pickupSource: {fileID: 0}
   OnBecameFocus:
     m_PersistentCalls:
       m_Calls: []
@@ -490,7 +491,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 99e759237039de44ca6b630d911ca987, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
