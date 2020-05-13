@@ -15,6 +15,10 @@ public class Weapon : MonoBehaviour, IInteractable
     public AK.Wwise.Event WeaponImpact = new AK.Wwise.Event();
     public AK.Wwise.Switch WeaponTypeSwitch = new AK.Wwise.Switch();
 
+    [Header("Audio Sources")]  
+    [SerializeField]
+    private AudioSource weaponSource;
+
     [Header("Combo Actions")]
     //public AK.Wwise.Event ComboEvent = new AK.Wwise.Event();
     public AK.Wwise.State WeaponCombo1 = new AK.Wwise.State();
@@ -230,6 +234,7 @@ public class Weapon : MonoBehaviour, IInteractable
                 GameManager.DamageObject(col.gameObject, attack);
                 WeaponTypeSwitch.SetValue(transform.parent.gameObject); // Weapon Type
                 WeaponImpact.Post(transform.parent.gameObject);
+                weaponSource.Play(); 
             }
         }
     }
@@ -238,7 +243,7 @@ public class Weapon : MonoBehaviour, IInteractable
         //WeaponTypeSwitch.SetValue(transform.parent.gameObject); // Weapon Type
         alreadyHitObjects.Add(HitObj);
         WeaponImpact.Post(transform.parent.gameObject);
-
+        weaponSource.Play();
     }
 
 }
