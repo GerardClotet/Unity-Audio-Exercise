@@ -28,4 +28,14 @@ public class SliderControlledRTPC : MonoBehaviour
     {
         mixer.SetFloat("AudioVolume", value);
     }
+
+    public void SetSFXVolume(float value)
+    {
+        mixer.SetFloat("SFXVolume", value);
+    }
+
+    public void SetVoiceVolume(float value)
+    {
+        mixer.SetFloat("VoiceVolume", value);
+    }
 }
