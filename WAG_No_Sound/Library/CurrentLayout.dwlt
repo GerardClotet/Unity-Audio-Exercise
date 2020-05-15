@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 64
+  controlID: 29
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 65
+  controlID: 30
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 66
+  controlID: 31
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -501,7 +501,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 36f2ffff
       m_LastClickedID: -3530
-      m_ExpandedIDs: b8ebffffbaebffff2eecffffeeedfffff2eeffff5cf0ffff36f2ffffd6fbffffc04f0000
+      m_ExpandedIDs: b6adffffc4e5ffffd4e5ffffb6ebffffb8ebffff2cecffffecedfffff0eeffff5af0ffff36f2ffffd6fbffffc04f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -643,19 +643,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio/SFX/Interface
+    - Assets/Misc. Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Audio/SFX/Interface
+  - Assets/Misc. Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Gerard Clotet\Documents\GitHub\Unity-Audio-Exercise\WAG_No_Sound
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 16}
-    m_SelectedIDs: f8240000
-    m_LastClickedID: 9464
+    scrollPos: {x: 0, y: 368}
+    m_SelectedIDs: 90250000
+    m_LastClickedID: 9616
     m_ExpandedIDs: 000000000e130000e01600003017000070180000be1b00000a1d0000b01d0000521e0000321f0000361f0000cc20000078220000f422000018230000922300009824000028250000d6250000f8250000fe2600000627000040280000742a0000de9c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
