@@ -21,8 +21,11 @@ public class UIEventSounds : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private AudioSource audio_source;
     public void Start()
     {
-        audio_source = GameObject.Find("Menus").GetComponent<AudioSource>();
- 
+        if(GameObject.Find("Menus") != null)
+            audio_source = GameObject.Find("Menus").GetComponent<AudioSource>();
+
+        else audio_source = GameObject.Find("Menu").GetComponent<AudioSource>();
+
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -34,6 +37,7 @@ public class UIEventSounds : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+
         audio_source.clip = OverSFX;
         if (audio_source.clip != null)
             audio_source.Play();

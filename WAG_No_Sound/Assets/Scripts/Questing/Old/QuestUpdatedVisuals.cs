@@ -13,6 +13,9 @@ using QuestSystem;
 public class QuestUpdatedVisuals : MonoBehaviour
 {
     public float ShowDuration = 6f;
+    private AudioSource audio_source;
+    public AudioClip QuestRollOpenSFX;
+    public AudioClip QuestRollCloseSFX;
 
     #region private variables
     [SerializeField]
@@ -34,6 +37,11 @@ public class QuestUpdatedVisuals : MonoBehaviour
     private readonly int showTrigger = Animator.StringToHash("Show");
     private readonly int hideTrigger = Animator.StringToHash("Hide");
     #endregion
+
+    private void Start()
+    {
+        audio_source = GameObject.Find("Menus").GetComponent<AudioSource>();
+    }
 
     public void OnEnable()
     {
@@ -64,6 +72,9 @@ public class QuestUpdatedVisuals : MonoBehaviour
     {
         if (!isShowing)
         {
+            audio_source.clip = QuestRollOpenSFX;
+            if (audio_source.clip != null)
+                audio_source.Play();
             questUpdatedAnimator.SetTrigger(showTrigger);
             isShowing = true;
         }
@@ -73,6 +84,9 @@ public class QuestUpdatedVisuals : MonoBehaviour
     {
         if (isShowing)
         {
+            audio_source.clip = QuestRollCloseSFX;
+            if (audio_source.clip != null)
+                audio_source.Play();
             questUpdatedAnimator.SetTrigger(hideTrigger);
             isShowing = false;
         }
