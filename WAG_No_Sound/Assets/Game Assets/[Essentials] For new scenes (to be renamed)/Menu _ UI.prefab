@@ -12564,7 +12564,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114112501358933322}
-        m_MethodName: SetRTPC
+        m_MethodName: SetAudioVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12608,10 +12608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337d000ccdb954b5e959bfef1be88494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RTPC:
-    idInternal: -1652528752
-    valueGuidInternal: 6506f311d775004b875101114a8b8bf1
-    WwiseObjectReference: {fileID: 0}
+  mixer: {fileID: 24100000, guid: cd4d6f21aeb5f4f44917208a67f4d2c5, type: 2}
 --- !u!114 &114750073526160284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14098,7 +14095,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114567553145366720}
-        m_MethodName: SetRTPC
+        m_MethodName: SetMasterVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14142,10 +14139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337d000ccdb954b5e959bfef1be88494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RTPC:
-    idInternal: 1333239961
-    valueGuidInternal: f3cdc9a257094a4ab327cb3d2b99f39f
-    WwiseObjectReference: {fileID: 0}
+  mixer: {fileID: 24100000, guid: cd4d6f21aeb5f4f44917208a67f4d2c5, type: 2}
 --- !u!114 &114618134497236814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45883,7 +45877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000006150154}
+  m_AnchoredPosition: {x: 0, y: 0.0000027371232}
   m_SizeDelta: {x: 232.96, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &222643312031218736
