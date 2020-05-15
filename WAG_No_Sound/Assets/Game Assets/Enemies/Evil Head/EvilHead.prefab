@@ -5171,7 +5171,8 @@ AudioSource:
   m_GameObject: {fileID: 1000012388946620}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243213043676882768, guid: cd4d6f21aeb5f4f44917208a67f4d2c5,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ffc841f49cb793c469aeecb44dd92c2d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5267,7 +5268,8 @@ AudioSource:
   m_GameObject: {fileID: 1000012388946620}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243213043676882768, guid: cd4d6f21aeb5f4f44917208a67f4d2c5,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 47bc2319acbfa5b428aeb33847d15a34, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -5363,7 +5365,8 @@ AudioSource:
   m_GameObject: {fileID: 1000012388946620}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243213043676882768, guid: cd4d6f21aeb5f4f44917208a67f4d2c5,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 317816face3e72c4b9e18b3c0e52e72b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10434,6 +10437,7 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 00000000000000000000000000000000
     WwiseObjectReference: {fileID: 0}
+  weaponSource: {fileID: 0}
   WeaponCombo1:
     idInternal: 0
     valueGuidInternal: 00000000000000000000000000000000
